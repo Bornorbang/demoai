@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Link to custom CSS -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column mt-5">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#pipeline">
+                                <i class="fas fa-tasks"></i> Pipeline
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#marketplace">
+                                <i class="fas fa-store"></i> Marketplace
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#knowledge">
+                                <i class="fas fa-book"></i> Knowledge
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#files">
+                                <i class="fas fa-file-alt"></i> Files
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#automation">
+                                <i class="fas fa-cogs"></i> Automation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#chatbots">
+                                <i class="fas fa-robot"></i> Chatbots
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#search">
+                                <i class="fas fa-search"></i> Search
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#forms">
+                                <i class="fas fa-clipboard"></i> Forms
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#voicebots">
+                                <i class="fas fa-headset"></i> Voicebots
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#bulkJobs">
+                                <i class="fas fa-briefcase"></i> Bulk Jobs
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portals">
+                                <i class="fas fa-window-restore"></i> Portals
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#evaluations">
+                                <i class="fas fa-clipboard-list"></i> Evaluations
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#transformations">
+                                <i class="fas fa-exchange-alt"></i> Transformations
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#analytics">
+                                <i class="fas fa-chart-line"></i> Analytics
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <div class="main-content col-md-9 col-lg-10">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <!-- Header Section -->
+                        <div class="card-header">
+                            <h5 class="mb-0" id="main-title">Pipelines</h5>
+                            <button class="btn btn-transparent btn-sm">New</button>
+                        </div>
+                        <!-- Content Section -->
+                        <div class="mt-3 another">
+                            <div class="text-center">
+                                <div class="card smaller-card shadow-sm mx-auto my-5">
+                                    <div class="card-body">
+                                        <i class="fas fa-tasks fa-3x mb-3 text-primary"></i>
+                                        <h5>Pipelines</h5>
+                                        <p class="text-muted">Manage your sales and customer pipelines here.</p>
+                                        <button class="btn btn-primary">Create Pipelines</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Wait for the DOM to load
+        document.addEventListener("DOMContentLoaded", function () {
+            // Select all sidebar links
+            const sidebarLinks = document.querySelectorAll("#sidebar .nav-link");
+    
+            // Reference the main content area
+            const mainContent = document.querySelector(".another");
+            const mainTitle = document.getElementById("main-title");
+    
+            // Define content for each sidebar item
+            const contentMap = {
+                pipeline: { icon: "fas fa-tasks", title: "Pipeline", description: "Manage your sales and customer pipelines here." },
+                marketplace: { icon: "fas fa-store", title: "Marketplace", description: "Browse and access various marketplace features." },
+                knowledge: { icon: "fas fa-book", title: "Knowledge", description: "Access and manage your knowledge base here." },
+                files: { icon: "fas fa-file-alt", title: "Files", description: "Organize and manage your files efficiently." },
+                automation: { icon: "fas fa-cogs", title: "Automation", description: "Create and manage your automation workflows." },
+                chatbots: { icon: "fas fa-robot", title: "Chatbots", description: "Manage and deploy your AI-powered chatbots here." },
+                search: { icon: "fas fa-search", title: "Search", description: "Perform quick searches across your content." },
+                forms: { icon: "fas fa-clipboard", title: "Forms", description: "Create and manage forms for your business needs." },
+                voicebots: { icon: "fas fa-headset", title: "Voicebots", description: "Build and manage AI-powered voice assistants." },
+                bulkJobs: { icon: "fas fa-briefcase", title: "Bulk Jobs", description: "Manage bulk tasks and operations efficiently." },
+                portals: { icon: "fas fa-window-restore", title: "Portals", description: "Set up and manage custom user portals." },
+                evaluations: { icon: "fas fa-clipboard-list", title: "Evaluations", description: "Conduct and track performance evaluations." },
+                transformations: { icon: "fas fa-exchange-alt", title: "Transformations", description: "Apply data transformations for analysis." },
+                analytics: { icon: "fas fa-chart-line", title: "Analytics", description: "View insights and analytics for your operations." },
+            };
+    
+            // Add click event listener to each sidebar link
+            sidebarLinks.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault(); // Prevent default link behavior
+    
+                    // Remove active class from all links
+                    sidebarLinks.forEach(link => link.classList.remove("active"));
+    
+                    // Add active class to the clicked link
+                    this.classList.add("active");
+    
+                    // Get the key from the sidebar item's href attribute (e.g., #pipeline)
+                    const sectionKey = this.getAttribute("href").substring(1);
+
+                    // Get the title from the sidebar link's text
+                    const title = this.textContent.trim();
+    
+                    // Update the main title and button
+                    mainTitle.textContent = title;
+    
+                    // Update the main content area with corresponding content
+                    if (contentMap[sectionKey]) {
+                        const { icon, title, description } = contentMap[sectionKey];
+    
+                        mainContent.innerHTML = `
+                            <div class="text-center">
+                                <div class="card smaller-card shadow-sm mx-auto my-5">
+                                    <div class="card-body">
+                                        <i class="${icon} fa-3x mb-3 text-primary"></i>
+                                        <h5>${title}</h5>
+                                        <p class="text-muted">${description}</p>
+                                        <button class="btn btn-primary">Create ${title}</button>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }
+                });
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
